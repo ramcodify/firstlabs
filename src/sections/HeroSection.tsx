@@ -73,10 +73,10 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Product Switch Tabs */}
-            <div className="flex items-center p-1 bg-studio-surface-warm rounded-xl border border-studio-border text-xs w-full sm:w-auto">
+            <div className="flex items-center p-1 bg-studio-surface-warm rounded-xl border border-studio-border text-[11px] sm:text-xs w-full sm:w-auto overflow-x-auto">
               <button
                 onClick={() => setActiveTab('firsthire')}
-                className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg font-medium transition-all ${
+                className={`flex-1 sm:flex-initial px-3 sm:px-3.5 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap active:scale-[0.98] ${
                   activeTab === 'firsthire'
                     ? 'bg-studio-surface text-studio-accent font-semibold shadow-subtle border border-studio-border'
                     : 'text-studio-muted hover:text-studio-text'
@@ -86,7 +86,7 @@ export const HeroSection: React.FC = () => {
               </button>
               <button
                 onClick={() => setActiveTab('copyshelf')}
-                className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg font-medium transition-all ${
+                className={`flex-1 sm:flex-initial px-3 sm:px-3.5 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap active:scale-[0.98] ${
                   activeTab === 'copyshelf'
                     ? 'bg-studio-surface text-studio-accent font-semibold shadow-subtle border border-studio-border'
                     : 'text-studio-muted hover:text-studio-text'
@@ -96,7 +96,7 @@ export const HeroSection: React.FC = () => {
               </button>
               <button
                 onClick={() => setActiveTab('gymtimer')}
-                className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg font-medium transition-all ${
+                className={`flex-1 sm:flex-initial px-3 sm:px-3.5 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap active:scale-[0.98] ${
                   activeTab === 'gymtimer'
                     ? 'bg-studio-surface text-studio-accent font-semibold shadow-subtle border border-studio-border'
                     : 'text-studio-muted hover:text-studio-text'

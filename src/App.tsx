@@ -54,7 +54,7 @@ export function App() {
       <Preloader />
 
       {/* Sticky Top Navigation */}
-      <Navbar />
+      <Navbar onOpenLegal={handleOpenLegal} />
 
       {/* Main Content Assembly */}
       <main id="main-content" className="flex-1">
