@@ -81,7 +81,7 @@ export const AboutSection: React.FC = () => {
                 </h3>
               </div>
               <p className="text-xs text-studio-muted leading-relaxed">
-                We publish our software directly on Google Play, operate with transparent salaries, and maintain direct lines of communication.
+                We publish our software directly on Google Play, build focused native Android applications, and maintain direct lines of communication.
               </p>
             </div>
           </div>

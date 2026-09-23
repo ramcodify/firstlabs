@@ -11,14 +11,14 @@ export const ResearchSection: React.FC = () => {
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs font-semibold text-studio-muted tracking-widest uppercase">
-              [04] / APPLIED RESEARCH
+              Applied Research
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-studio-text tracking-tight">
             Engineering for Cognitive Simplicity
           </h2>
           <p className="mt-4 text-base sm:text-lg text-studio-muted leading-relaxed">
-            How we translate information retrieval theory, vector mathematics, and native mobile client runtime into frictionless daily tools.
+            How we translate research in information retrieval, vector mathematics, and native mobile runtime into frictionless user experiences.
           </p>
         </div>
 
@@ -117,9 +117,22 @@ export const ResearchSection: React.FC = () => {
         </div>
 
         {/* Studio Disclaimer Notice */}
-        <div className="mt-12 p-4 rounded-xl bg-studio-surface-warm border border-studio-border text-xs text-studio-muted leading-relaxed max-w-3xl">
-          <span className="font-bold text-studio-text">Benchmark Methodology Note:</span> Performance figures and latency metrics are internal studio benchmarks recorded on midrange physical test devices (Snapdragon 7-series / Dimensity 8000), not external independent laboratory trials.
-        </div>
+        <p className="mt-8 text-xs text-studio-muted leading-relaxed max-w-3xl">
+          Product features and availability:{' '}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.remedez.firsthire"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-studio-accent font-medium hover:underline"
+          >
+            FirstHire on Google Play
+          </a>
+          . Data practices:{' '}
+          <a href="#firsthire-privacy" className="text-studio-accent font-medium hover:underline">
+            FirstHire Privacy Policy
+          </a>
+          . Performance figures are internal studio benchmarks, not independent studies.
+        </p>
 
       </div>
     </section>

@@ -22,34 +22,30 @@ export const HeroSection: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-studio-text tracking-tight leading-[1.08] mb-6">
-            The First Labs
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-studio-text tracking-tight leading-[1.12] mb-6">
+            The First Labs builds <span className="text-studio-accent italic">Android apps and AI-powered job tools</span> for everyday work, learning, and life.
           </h1>
 
-          <p className="font-serif italic text-2xl sm:text-3xl text-studio-text/90 leading-snug mb-4">
-            Independent products for work, learning, and everyday life.
-          </p>
-
           <p className="text-base sm:text-lg text-studio-muted leading-relaxed max-w-2xl mb-8">
-            We build focused software that removes friction from the things people do every day. Native Android applications, distributed indexing pipelines, and applied intelligence without unnecessary complexity.
+            The First Labs is an independent product studio. We build native Android software such as FirstHire, CopyShelf, and Gym Timer, using cognitive science and information retrieval to remove friction from everyday workflows.
           </p>
 
           <div className="flex flex-wrap items-center gap-3.5">
             <Button
-              href="#products"
+              href="#firsthire-showcase"
               variant="primary"
               size="md"
               icon={<ArrowDown className="w-4 h-4" />}
             >
-              Explore our products
+              Explore FirstHire
             </Button>
             
             <Button
-              href="#philosophy"
+              href="#products"
               variant="secondary"
               size="md"
             >
-              See how we build &rarr;
+              View All Applications &darr;
             </Button>
 
             <span className="font-mono text-xs text-studio-muted ml-1 hidden sm:inline">
@@ -122,30 +118,30 @@ export const HeroSection: React.FC = () => {
                   <div>
                     <div className="flex items-center gap-2">
                       <h3 className="font-serif text-2xl font-bold text-studio-text">FirstHire</h3>
-                      <Badge variant="accent">Flagship</Badge>
+                      <Badge variant="accent">Flagship Product</Badge>
                     </div>
                     <p className="text-xs font-mono text-studio-accent font-semibold">
-                      AI Job Search &bull; 768-dim Vector Match
+                      AI Career Matching &amp; Resume Accelerator
                     </p>
                   </div>
                 </div>
 
                 <p className="text-sm text-studio-muted leading-relaxed">
-                  Indexes fresh engineering opportunities directly from employer career platforms, calculates 768-dimensional semantic embeddings, and alerts candidates within 5 minutes of job drops.
+                  Finding a job shouldn't feel like a full-time job. FirstHire continuously indexes tech openings across global ecosystems, computes 768-dimensional semantic embeddings, and adapts your resume for target positions in one tap.
                 </p>
 
                 <div className="space-y-2 text-xs text-studio-text font-medium">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Real-time push alerts within 5 minutes of posting</span>
+                    <span>Semantic cosine similarity matching (768 dimensions)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>1-Click ATS resume restructuring preserving factual truth</span>
+                    <span>1-Click ATS-tailored resume generation</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Zero agency spam &bull; 100% direct employer links</span>
+                    <span>Zero-latency experience &amp; multi-city location filtering</span>
                   </div>
                 </div>
 
@@ -155,7 +151,7 @@ export const HeroSection: React.FC = () => {
                     variant="primary"
                     size="sm"
                   >
-                    Deep Dive Case Study &rarr;
+                    Product Details &rarr;
                   </Button>
                   <Button
                     href="https://play.google.com/store/apps/details?id=com.remedez.firsthire"
@@ -178,32 +174,32 @@ export const HeroSection: React.FC = () => {
                   <div className="flex items-center justify-between text-xs font-mono pb-2 border-b border-studio-border text-studio-muted">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                      <span className="text-studio-text font-medium">Live Feed: Mumbai Tech Ecosystem</span>
+                      <span className="text-studio-text font-medium">Verified Job Drops Feed</span>
                     </div>
                     <span className="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded text-[11px] font-semibold border border-emerald-200">
-                      Sync: &lt; 5m ago
+                      Sub-5m Alert
                     </span>
                   </div>
 
-                  {/* Simulated Verified Job Drop Card */}
+                  {/* Verified Job Drop Card 1 from live FirstHire */}
                   <div className="bg-studio-surface border border-studio-border rounded-xl p-4 shadow-subtle hover:border-studio-accent/40 transition-colors">
                     <div className="flex items-start justify-between gap-3 mb-2">
                       <div>
                         <div className="flex items-center gap-2">
-                          <h4 className="font-bold text-sm text-studio-text">Systems Backend Engineer</h4>
+                          <h4 className="font-bold text-sm text-studio-text">Swiggy dropped SDE-1 (Backend)</h4>
                           <span className="text-[10px] font-mono bg-blue-50 text-studio-accent px-1.5 py-0.5 rounded font-bold">
                             94% MATCH
                           </span>
                         </div>
-                        <p className="text-xs text-studio-accent font-medium">High-Throughput Distributed Platform &bull; Mumbai</p>
+                        <p className="text-xs text-studio-accent font-medium">Bengaluru &bull; ₹16–24 LPA &bull; Greenhouse ATS</p>
                       </div>
                       <span className="font-mono text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-bold whitespace-nowrap">
-                        ₹22-26 LPA
+                        Just now
                       </span>
                     </div>
 
                     <p className="text-xs text-studio-muted line-clamp-2 mb-3">
-                      Required: Go / Node.js, distributed database sharding, Redis caching, and low-latency API design.
+                      Required: Concurrent services in Go / Java, Redis caching, and distributed database querying.
                     </p>
 
                     <div className="flex items-center justify-between pt-2 border-t border-studio-border/60 text-xs">
@@ -213,25 +209,25 @@ export const HeroSection: React.FC = () => {
                         <span className="font-mono text-[10px] bg-studio-surface-warm text-studio-muted px-2 py-0.5 rounded">PostgreSQL</span>
                       </div>
                       <span className="text-studio-accent font-semibold text-[11px] flex items-center gap-1">
-                        1-Click ATS Tailored &rarr;
+                        1-Click ATS Tailor &rarr;
                       </span>
                     </div>
                   </div>
 
-                  {/* Simulated Second Job Card */}
+                  {/* Verified Job Drop Card 2 from live FirstHire */}
                   <div className="bg-studio-surface border border-studio-border rounded-xl p-3.5 shadow-subtle opacity-90">
                     <div className="flex items-start justify-between gap-3">
                       <div>
                         <div className="flex items-center gap-2">
-                          <h4 className="font-bold text-sm text-studio-text">Client Platform Engineer</h4>
+                          <h4 className="font-bold text-sm text-studio-text">Razorpay posted Frontend Dev 1</h4>
                           <span className="text-[10px] font-mono bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded font-bold">
                             91% MATCH
                           </span>
                         </div>
-                        <p className="text-xs text-studio-accent font-medium">Core Web Architecture &bull; Hybrid</p>
+                        <p className="text-xs text-studio-accent font-medium">Bengaluru / Remote &bull; ₹14–20 LPA &bull; Greenhouse ATS</p>
                       </div>
-                      <span className="font-mono text-[11px] text-studio-text font-bold">
-                        ₹18-24 LPA
+                      <span className="font-mono text-[11px] text-studio-muted">
+                        2m ago
                       </span>
                     </div>
                   </div>
@@ -253,29 +249,29 @@ export const HeroSection: React.FC = () => {
                     className="w-12 h-12 rounded-xl border border-studio-border shadow-subtle object-cover"
                   />
                   <div>
-                    <h3 className="font-serif text-2xl font-bold text-studio-text">CopyShelf</h3>
+                    <h3 className="font-serif text-2xl font-bold text-studio-text">CopyShelf: Edge Clipboard</h3>
                     <p className="text-xs font-mono text-studio-amber font-semibold">
-                      Edge-Panel Clipboard &bull; 100% Offline-First
+                      Edge-Panel Clipboard Manager &bull; Utility
                     </p>
                   </div>
                 </div>
 
                 <p className="text-sm text-studio-muted leading-relaxed">
-                  A persistent sliding edge drawer allowing instant access to frequently used text snippets, code templates, and tokens from any active Android screen.
+                  An edge panel clipboard manager allowing instant access to saved text snippets via a floating edge drawer. Designed with offline-first privacy and automatic sensitive data masking.
                 </p>
 
                 <div className="space-y-2 text-xs text-studio-text font-medium">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Sliding edge handle accessible across any running app</span>
+                    <span>Sliding edge handle accessible across any active Android screen</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Encrypted local Room database with zero network footprint</span>
+                    <span>100% offline-first encrypted Room database with zero network footprint</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Automatic masking of passwords, tokens, and credit cards</span>
+                    <span>Automatic masking of passwords, credit cards, and sensitive tokens</span>
                   </div>
                 </div>
 
@@ -298,7 +294,7 @@ export const HeroSection: React.FC = () => {
                 <div className="space-y-3 font-mono text-xs">
                   <div className="flex items-center justify-between pb-2 border-b border-studio-border text-studio-muted">
                     <span>Edge Handle: Screen Right [Active]</span>
-                    <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">100% On-Device</span>
+                    <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">100% On-Device Room DB</span>
                   </div>
 
                   <div className="bg-studio-surface p-3 rounded-lg border border-studio-border space-y-1">
@@ -336,15 +332,15 @@ export const HeroSection: React.FC = () => {
                     className="w-12 h-12 rounded-xl border border-studio-border shadow-subtle object-cover"
                   />
                   <div>
-                    <h3 className="font-serif text-2xl font-bold text-studio-text">Gym Timer</h3>
+                    <h3 className="font-serif text-2xl font-bold text-studio-text">Gym Timer: Workout Tracker</h3>
                     <p className="text-xs font-mono text-emerald-700 font-semibold">
-                      Workout Consistency Tracker &bull; Zero Bloat
+                      Workout Consistency Tracker &bull; Health &amp; Fitness
                     </p>
                   </div>
                 </div>
 
                 <p className="text-sm text-studio-muted leading-relaxed">
-                  A minimalist workout companion built around the single metric that matters most: showing up. No repetitive exercise logging, no social feeds, no tracking paywalls.
+                  A minimalist fitness companion focused purely on workout consistency. Tracks total time spent at the gym with one-tap check-ins and activity heatmaps without complex logging bloat.
                 </p>
 
                 <div className="space-y-2 text-xs text-studio-text font-medium">
@@ -354,11 +350,11 @@ export const HeroSection: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>GitHub-style annual consistency heatmap</span>
+                    <span>GitHub-style annual consistency heatmap visualization</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Zero advertisements &bull; Zero battery-draining services</span>
+                    <span>Zero advertisements, tracking cookies, or subscription walls</span>
                   </div>
                 </div>
 

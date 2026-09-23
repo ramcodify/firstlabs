@@ -10,7 +10,8 @@ export const ProductsSection: React.FC = () => {
   const gymTimer = PRODUCTS.find((p) => p.id === 'gymtimer')!;
 
   return (
-    <section id="products" className="py-24 sm:py-32 bg-studio-surface-warm/40 border-b border-studio-border">
+    <section id="products" className="py-24 sm:py-32 bg-studio-surface-warm/40 border-b border-studio-border relative">
+      <div id="apps" className="absolute -top-20" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -18,14 +19,14 @@ export const ProductsSection: React.FC = () => {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-3">
               <span className="font-mono text-xs font-semibold text-studio-muted tracking-widest uppercase">
-                [02] / SOFTWARE PORTFOLIO
+                Applications
               </span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl font-normal text-studio-text tracking-tight">
-              Products we build
+              Our Software Portfolio
             </h2>
             <p className="mt-4 text-base sm:text-lg text-studio-muted leading-relaxed">
-              Focused software built for specific moments of friction. Distinct engineering identities, native mobile performance, and strictly private by default.
+              Focused, privacy-first Android applications built to solve specific productivity and daily lifestyle challenges.
             </p>
           </div>
 

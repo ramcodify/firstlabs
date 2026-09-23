@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             </div>
 
             <p className="text-xs sm:text-sm text-studio-muted leading-relaxed max-w-sm">
-              An independent product studio based in Mumbai. We build focused native Android applications and AI-powered tools that solve everyday friction for work, learning, and daily life.
+              The First Labs builds Android solutions that make work, learning, and life a little easier. Explore FirstHire, CopyShelf, and Gym Timer.
             </p>
 
             <div className="pt-2 font-mono text-xs text-studio-muted space-y-1">
@@ -166,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             &copy; 2026 The First Labs. All rights reserved.
           </div>
           <div className="text-[11px] text-studio-muted/80 text-center sm:text-right">
-            Independent Software &bull; Native Android &bull; Privacy-first
+            Building Android solutions that make work, learning, and life a little easier.
           </div>
         </div>
 

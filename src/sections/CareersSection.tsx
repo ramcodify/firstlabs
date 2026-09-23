@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, IndianRupee, Laptop, Shield, BookOpen, Send } from 'lucide-react';
+import { Mail, MapPin, Laptop, Shield, BookOpen, Send } from 'lucide-react';
 import type { JobOpening } from '../data/careers';
 import { JOB_OPENINGS, STUDIO_PROVISIONS } from '../data/careers';
 import { Button } from '../components/Button';
@@ -19,19 +19,19 @@ export const CareersSection: React.FC<CareersSectionProps> = ({ onSelectJob }) =
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-3">
               <span className="font-mono text-xs font-semibold text-studio-muted tracking-widest uppercase">
-                [07] / STUDIO CAREERS
+                Studio Careers
               </span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl font-normal text-studio-text tracking-tight">
-              Build things that people actually use.
+              Software Engineering Jobs at The First Labs
             </h2>
             <p className="mt-4 text-base sm:text-lg text-studio-muted leading-relaxed">
-              We are an engineering-led team based in Mumbai. We offer high autonomy, transparent compensation, modern hardware, and zero bureaucratic theatre.
+              The First Labs is an independent product studio based in Mumbai. We are hiring full-time Associate Software Engineer and Associate Frontend Developer roles to build native Android software, distributed vector search pipelines, and candidate intelligence tools.
             </p>
           </div>
 
           <div className="font-mono text-xs text-studio-muted">
-            2 Active Full-Time Engineering Openings &bull; Mumbai Hub
+            Current Openings (2) &bull; Mumbai Hub
           </div>
         </div>
 
@@ -54,9 +54,8 @@ export const CareersSection: React.FC<CareersSectionProps> = ({ onSelectJob }) =
                       {job.location}
                     </span>
                   </div>
-                  <span className="font-mono text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 flex items-center gap-1">
-                    <IndianRupee className="w-3 h-3" />
-                    {job.ctc}
+                  <span className="font-mono text-xs font-bold text-studio-accent bg-studio-accent-light px-2.5 py-1 rounded-md border border-studio-accent/20">
+                    {job.type}
                   </span>
                 </div>
 

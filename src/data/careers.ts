@@ -5,9 +5,6 @@ export interface JobOpening {
   department: string;
   location: string;
   type: string;
-  ctc: string;
-  baseSalary: string;
-  variablePay: string;
   summary: string;
   tags: string[];
   responsibilities: { title: string; desc: string }[];
@@ -20,77 +17,12 @@ export interface JobOpening {
 
 export const JOB_OPENINGS: JobOpening[] = [
   {
-    id: 'fed-2026',
-    refCode: 'FED-2026',
-    title: 'Associate Frontend Developer',
-    department: 'Web & Client Architecture',
-    location: 'Mumbai, India (Hybrid)',
-    type: 'Full-Time',
-    ctc: '₹8 LPA + Variables',
-    baseSalary: '₹8 LPA Guaranteed Base',
-    variablePay: 'Performance-linked feature bonuses',
-    summary: 'Build responsive web applications, component design systems, client-side state synchronization, and sub-second interaction pipelines for high-throughput candidate platforms.',
-    tags: ['TypeScript', 'Modern Web', 'Design Systems', 'Core Web Vitals', 'WebSockets', 'REST APIs'],
-    responsibilities: [
-      {
-        title: 'Web Applications & Interfaces',
-        desc: 'Develop and maintain user-facing web applications using modern JavaScript, TypeScript, and component-driven frameworks.'
-      },
-      {
-        title: 'Rendering Performance & Core Web Vitals',
-        desc: 'Optimize bundle sizes, client caching, asset delivery, and rendering lifecycles to maintain sub-second page loads and fluid interaction latency.'
-      },
-      {
-        title: 'Design Systems & UI Engineering',
-        desc: 'Translate product requirements and design mockups into accessible, reusable component libraries with strict visual consistency.'
-      },
-      {
-        title: 'State Management & Data Synchronization',
-        desc: 'Architect client-side state handling, offline tolerance, optimistic updates, and real-time data streaming via WebSockets.'
-      },
-      {
-        title: 'Code Quality & Automated Testing',
-        desc: 'Write automated component, end-to-end, and visual regression tests to maintain zero-regression release cycles.'
-      }
-    ],
-    requirements: [
-      {
-        title: 'JavaScript & TypeScript Mastery',
-        desc: 'Deep knowledge of ECMAScript standards, closures, asynchronous patterns, browser event loop, and static type systems.'
-      },
-      {
-        title: 'DOM, CSS & Browser Internals',
-        desc: 'Clear understanding of critical rendering path, layout reflows, compositor layers, CSS architecture, and cross-browser rendering behavior.'
-      },
-      {
-        title: 'Network & Client-Side Storage',
-        desc: 'Familiarity with HTTP caching headers, Service Workers, IndexedDB, Web Storage, and network request optimization.'
-      },
-      {
-        title: 'Accessibility & Standards',
-        desc: 'Commitment to WCAG accessibility standards, semantic HTML, keyboard navigation, and assistive technologies.'
-      }
-    ],
-    selectionProcess: [
-      { stage: '1', title: 'Online Technical Assessment', desc: 'Structured evaluation covering core JavaScript fundamentals, DOM concepts, web standards, and analytical problem-solving.' },
-      { stage: '2', title: 'Technical & JavaScript Interview', desc: '1-on-1 virtual technical interview exploring language fundamentals, asynchronous programming, frontend architecture, and practical engineering trade-offs.' },
-      { stage: '3', title: 'Managerial & Leadership Interview', desc: 'Discussion with engineering leadership focusing on project ownership, cross-functional collaboration, problem-solving mindset, and culture alignment.' },
-      { stage: '4', title: 'Offer & Onboarding', desc: 'Leadership alignment, compensation walkthrough, and formal onboarding roadmap for joining our core engineering team in Mumbai.' }
-    ],
-    applyEmail: 'talent@thefirstlabs.live',
-    mailSubject: 'Application: Associate Frontend Developer [FED-2026] - [Your Name]',
-    mailBody: 'Hi The First Labs Team,\n\nI am applying for the Associate Frontend Developer role (Ref: FED-2026).\n\nPortfolio / GitHub: \nLinkedIn: \nBrief note on relevant projects:\n\nLooking forward to hearing from you.\n'
-  },
-  {
     id: 'ase-26',
     refCode: 'ASE-26',
     title: 'Associate Software Engineer',
     department: 'Core Systems & Distributed Backend',
     location: 'Mumbai, India (Hybrid)',
     type: 'Full-Time',
-    ctc: '₹23 LPA + Variables',
-    baseSalary: '₹18–₹20 LPA Fixed Base',
-    variablePay: '₹3–₹5 LPA Performance-linked Bonus',
     summary: 'Build production backend microservices, real-time distributed crawlers, 768-dimensional vector search indexing pipelines, and high-performance database architectures powering FirstHire.',
     tags: ['Go', 'Node.js', 'TypeScript', 'PostgreSQL', 'Redis', 'Vector Search', 'Firestore'],
     responsibilities: [
@@ -137,11 +69,70 @@ export const JOB_OPENINGS: JobOpening[] = [
       { stage: '1', title: 'Profile & Project Evaluation', desc: 'Review of code repositories, past projects, or relevant engineering problem-solving background.' },
       { stage: '2', title: 'Technical & Systems Interview', desc: '1-on-1 virtual session focused on core algorithms, system architecture, and API design trade-offs.' },
       { stage: '3', title: 'Engineering Deep-Dive', desc: 'Technical discussion with senior engineers covering past implementations, database design, and practical edge cases.' },
-      { stage: '4', title: 'Offer & Onboarding', desc: 'Leadership alignment, compensation walkthrough, and formal offer rollout for joining our Mumbai team.' }
+      { stage: '4', title: 'Offer & Onboarding', desc: 'Leadership alignment and formal offer rollout for joining our Mumbai team.' }
     ],
     applyEmail: 'talent@thefirstlabs.live',
-    mailSubject: 'Application: Associate Software Engineer [ASE-26] - [Your Name]',
-    mailBody: 'Hi The First Labs Team,\n\nI am applying for the Associate Software Engineer role (Ref: ASE-26).\n\nGitHub / Profile: \nResume URL: \nBrief note on distributed systems / backend experience:\n\nBest regards,\n'
+    mailSubject: 'Application: Associate Software Engineer (ASE-26)',
+    mailBody: 'Hi The First Labs Team,\n\nI am applying for the Associate Software Engineer role (Ref: ASE-26).\n\nGitHub / Portfolio: \nLinkedIn: \nResume URL: \n\nBest regards,\n'
+  },
+  {
+    id: 'fed-2026',
+    refCode: 'FED-2026',
+    title: 'Associate Frontend Developer',
+    department: 'Web & Client Architecture',
+    location: 'Mumbai, India (Hybrid)',
+    type: 'Full-Time',
+    summary: 'Build responsive web applications, component design systems, client-side state synchronization, and sub-second interaction pipelines for high-throughput candidate platforms.',
+    tags: ['TypeScript', 'Modern Web', 'Design Systems', 'Core Web Vitals', 'WebSockets', 'REST APIs'],
+    responsibilities: [
+      {
+        title: 'Web Applications & Interfaces',
+        desc: 'Develop and maintain user-facing web applications using modern JavaScript, TypeScript, and component-driven frameworks.'
+      },
+      {
+        title: 'Rendering Performance & Core Web Vitals',
+        desc: 'Optimize bundle sizes, client caching, asset delivery, and rendering lifecycles to maintain sub-second page loads and fluid interaction latency.'
+      },
+      {
+        title: 'Design Systems & UI Engineering',
+        desc: 'Translate product requirements and design mockups into accessible, reusable component libraries with strict visual consistency.'
+      },
+      {
+        title: 'State Management & Data Synchronization',
+        desc: 'Architect client-side state handling, offline tolerance, optimistic updates, and real-time data streaming via WebSockets.'
+      },
+      {
+        title: 'Code Quality & Automated Testing',
+        desc: 'Write automated component, end-to-end, and visual regression tests to maintain zero-regression release cycles.'
+      }
+    ],
+    requirements: [
+      {
+        title: 'JavaScript & TypeScript Mastery',
+        desc: 'Deep knowledge of ECMAScript standards, closures, asynchronous patterns, browser event loop, and static type systems.'
+      },
+      {
+        title: 'DOM, CSS & Browser Internals',
+        desc: 'Clear understanding of critical rendering path, layout reflows, compositor layers, CSS architecture, and cross-browser rendering behavior.'
+      },
+      {
+        title: 'Network & Client-Side Storage',
+        desc: 'Familiarity with HTTP caching headers, Service Workers, IndexedDB, Web Storage, and network request optimization.'
+      },
+      {
+        title: 'Accessibility & Standards',
+        desc: 'Commitment to WCAG accessibility standards, semantic HTML, keyboard navigation, and assistive technologies.'
+      }
+    ],
+    selectionProcess: [
+      { stage: '1', title: 'Online Technical Assessment', desc: 'Structured evaluation covering core JavaScript fundamentals, DOM concepts, web standards, and analytical problem-solving.' },
+      { stage: '2', title: 'Technical & JavaScript Interview', desc: '1-on-1 virtual technical interview exploring language fundamentals, asynchronous programming, frontend architecture, and practical engineering trade-offs.' },
+      { stage: '3', title: 'Managerial & Leadership Interview', desc: 'Discussion with engineering leadership focusing on project ownership, cross-functional collaboration, problem-solving mindset, and culture alignment.' },
+      { stage: '4', title: 'Offer & Onboarding', desc: 'Leadership alignment and formal onboarding roadmap for joining our core engineering team in Mumbai.' }
+    ],
+    applyEmail: 'talent@thefirstlabs.live',
+    mailSubject: 'Application: Associate Frontend Developer (FED-2026)',
+    mailBody: 'Hi The First Labs Team,\n\nI am applying for the Associate Frontend Developer role (Ref: FED-2026).\n\nPortfolio / GitHub: \nLinkedIn: \nResume URL: \n\nBest regards,\n'
   }
 ];
 

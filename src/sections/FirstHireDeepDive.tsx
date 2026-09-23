@@ -21,10 +21,10 @@ export const FirstHireDeepDive: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-studio-text tracking-tight leading-[1.12]">
-            Finding a job shouldn't feel like a full-time job.
+            Be in the <span className="text-studio-accent italic">First 10 Applicants</span> for Verified Tech Jobs.
           </h2>
           <p className="mt-5 text-base sm:text-lg text-studio-muted leading-relaxed">
-            Tech job searches in competitive ecosystems suffer from two structural failures: notifications arrive 12 hours late after 300+ people have already applied, and ATS parsers reject qualified candidates whose resumes lack exact keyword phrase matches.
+            FirstHire is a native Android job search app that delivers real-time notifications within 5 minutes and tailors your ATS resume in 1 tap.
           </p>
         </div>
 
@@ -110,8 +110,8 @@ export const FirstHireDeepDive: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <h4 className="font-bold text-sm text-studio-text">Associate Software Engineer</h4>
-                    <p className="text-xs text-studio-accent font-medium">Fintech Scaleup &bull; Mumbai Tech Hub</p>
+                    <h4 className="font-bold text-sm text-studio-text">Swiggy dropped SDE-1 (Backend)</h4>
+                    <p className="text-xs text-studio-accent font-medium">Bengaluru &bull; ₹16–24 LPA &bull; Greenhouse ATS</p>
                     <p className="text-xs text-studio-muted leading-relaxed pt-1">
                       Looking for engineers experienced in concurrent services, caching with Redis, and writing reliable PostgreSQL queries.
                     </p>

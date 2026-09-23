@@ -1,31 +1,36 @@
 import React from 'react';
+import { Briefcase, BookOpen, Layers } from 'lucide-react';
 
 export const ValuesSection: React.FC = () => {
-  const values = [
+  const pillars = [
     {
-      statement: 'Useful over impressive.',
-      elaboration: 'We do not build technology merely to display technical virtuosity. We build software that performs an honest, helpful task.'
+      num: '01',
+      badge: '01 • Work & Careers',
+      title: 'Accelerating Professional Potential',
+      desc: 'We build tools like FirstHire that automate the most tedious aspects of career discovery, application formatting, and network outreach so candidates can focus on interview preparation.',
+      icon: Briefcase,
+      tag: 'FirstHire'
     },
     {
-      statement: 'Simple over complicated.',
-      elaboration: 'Complexity is easy; restraint is difficult. When given two viable architectures, we always choose the one with fewer moving parts.'
+      num: '02',
+      badge: '02 • Knowledge & Learning',
+      title: 'Simplifying Complex Information',
+      desc: 'We design reading and research engines that extract key concepts, synthesize dense documentation, and structure educational material into actionable knowledge for self-directed learners.',
+      icon: BookOpen,
+      tag: 'Research Engines'
     },
     {
-      statement: 'Private by default.',
-      elaboration: 'Your device belongs to you. Personal data, clipboard snippets, and career notes should never leave your hardware without your explicit intent.'
-    },
-    {
-      statement: 'Fast where it matters.',
-      elaboration: 'We care deeply about milliseconds. In-memory bitset intersections and 120 FPS Jetpack Compose interfaces make software feel instantaneous.'
-    },
-    {
-      statement: 'Small products, carefully made.',
-      elaboration: 'We take pride in the craft of small tools. We would rather build three focused, reliable applications than a sprawling, mediocre suite.'
+      num: '03',
+      badge: '03 • Daily Utility',
+      title: 'Unobtrusive Everyday Utility',
+      desc: 'From edge-drawer clipboard managers like CopyShelf to consistency trackers like Gym Timer, our utilities solve real daily needs without cognitive overhead.',
+      icon: Layers,
+      tag: 'CopyShelf & Gym Timer'
     }
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-studio-dark text-white border-b border-studio-dark-border relative overflow-hidden">
+    <section id="vision" className="py-24 sm:py-32 bg-studio-dark text-white border-b border-studio-dark-border relative overflow-hidden">
       {/* Dark micro-grid texture */}
       <div className="absolute inset-0 editorial-grid-dark pointer-events-none opacity-40" aria-hidden="true" />
 
@@ -35,39 +40,52 @@ export const ValuesSection: React.FC = () => {
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs font-semibold text-studio-amber tracking-widest uppercase">
-              [06] / STUDIO PRINCIPLES
+              Studio Focus
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white tracking-tight">
-            Practical principles over corporate slogans.
+            Our Three Pillars of Impact
           </h2>
           <p className="mt-4 text-base sm:text-lg text-studio-dark-muted leading-relaxed">
-            The tenets that govern what we build, how we architect systems, and what we deliberately choose to ignore.
+            Every product we build addresses one of three foundational areas of daily life.
           </p>
         </div>
 
-        {/* Typography-Led Statements Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {values.map((v, idx) => (
-            <div
-              key={idx}
-              className={`p-6 sm:p-8 rounded-2xl border border-studio-dark-border bg-studio-dark-surface/60 backdrop-blur-sm flex flex-col justify-between space-y-4 hover:border-studio-dark-muted/40 transition-colors ${
-                idx === 0 ? 'md:col-span-2 lg:col-span-1' : ''
-              }`}
-            >
-              <div>
-                <span className="font-mono text-xs text-studio-amber block mb-3 font-semibold">
-                  Principle 0{idx + 1}
-                </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white tracking-tight leading-snug">
-                  {v.statement}
-                </h3>
+        {/* 3 Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {pillars.map((p) => {
+            const Icon = p.icon;
+            return (
+              <div
+                key={p.num}
+                className="p-6 sm:p-8 rounded-2xl border border-studio-dark-border bg-studio-dark-surface/70 backdrop-blur-sm flex flex-col justify-between space-y-6 hover:border-studio-dark-muted/50 transition-colors"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between pb-3 border-b border-studio-dark-border">
+                    <span className="font-mono text-xs font-bold text-studio-amber uppercase tracking-wider">
+                      {p.badge}
+                    </span>
+                    <div className="w-8 h-8 rounded-lg bg-white/5 border border-studio-dark-border flex items-center justify-center text-studio-amber">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                  </div>
+
+                  <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white tracking-tight leading-snug">
+                    {p.title}
+                  </h3>
+
+                  <p className="text-sm text-studio-dark-muted leading-relaxed">
+                    {p.desc}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-studio-dark-border/60 flex items-center justify-between text-xs font-mono">
+                  <span className="text-studio-dark-muted">Focus Area:</span>
+                  <span className="text-white font-semibold">{p.tag}</span>
+                </div>
               </div>
-              <p className="text-xs sm:text-sm text-studio-dark-muted leading-relaxed">
-                {v.elaboration}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

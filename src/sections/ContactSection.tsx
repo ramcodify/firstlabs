@@ -148,14 +148,14 @@ export const ContactSection: React.FC = () => {
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs font-semibold text-studio-muted tracking-widest uppercase">
-              [09] / DIRECT CONTACT
+              Get in Touch
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-studio-text tracking-tight">
-            Have something worth building?
+            Direct Contact
           </h2>
           <p className="mt-4 text-base sm:text-lg text-studio-muted leading-relaxed">
-            Whether you have feedback on FirstHire, CopyShelf, Gym Timer, engineering questions, or careers inquiries, our team in Mumbai responds directly.
+            Whether you have feedback on FirstHire, CopyShelf, Gym Timer, or partnership inquiries, reach out directly to our engineering studio.
           </p>
         </div>
 

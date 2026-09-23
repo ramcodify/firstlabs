@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, Check, Copy, Mail, MapPin, Briefcase, IndianRupee, Shield, Laptop, BookOpen } from 'lucide-react';
+import { X, Check, Copy, Mail, MapPin, Briefcase, Shield, Laptop, BookOpen } from 'lucide-react';
 import type { JobOpening } from '../data/careers';
 import { STUDIO_PROVISIONS } from '../data/careers';
 import { Button } from './Button';
@@ -32,7 +32,7 @@ export const JobDetailModal: React.FC<JobDetailModalProps> = ({ job, onClose }) 
   const mailtoLink = `mailto:${job.applyEmail}?subject=${encodeURIComponent(job.mailSubject)}&body=${encodeURIComponent(job.mailBody)}`;
 
   const handleCopySpec = () => {
-    const specText = `The First Labs - ${job.title} (${job.refCode})\nCTC: ${job.ctc}\nLocation: ${job.location}\nApply: ${job.applyEmail}`;
+    const specText = `The First Labs - ${job.title} (${job.refCode})\nLocation: ${job.location}\nApply: ${job.applyEmail}`;
     navigator.clipboard.writeText(specText);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -62,9 +62,8 @@ export const JobDetailModal: React.FC<JobDetailModalProps> = ({ job, onClose }) 
               {job.title}
             </h2>
             <div className="flex items-center gap-4 text-xs text-studio-muted flex-wrap">
-              <span className="flex items-center gap-1 font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                <IndianRupee className="w-3.5 h-3.5" />
-                {job.ctc}
+              <span className="flex items-center gap-1 font-medium text-studio-accent bg-studio-accent-light px-2 py-0.5 rounded border border-studio-accent/20">
+                {job.type}
               </span>
               <span className="flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5" />
@@ -95,22 +94,24 @@ export const JobDetailModal: React.FC<JobDetailModalProps> = ({ job, onClose }) 
             <p className="text-studio-muted">{job.summary}</p>
           </div>
 
-          {/* Compensation Breakdown */}
+          {/* Studio Provisions */}
           <section className="space-y-3">
             <h3 className="font-sans font-bold text-sm tracking-tight text-studio-text uppercase tracking-wider text-xs">
-              Compensation Architecture
+              Studio Provisions &bull; Compensation Standard
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="p-3.5 rounded-lg border border-studio-border bg-white space-y-1">
-                <div className="text-xs text-studio-muted font-medium">Guaranteed Base</div>
-                <div className="text-sm font-semibold text-studio-text">{job.baseSalary}</div>
-                <div className="text-[11px] text-studio-muted">Standard monthly payroll + biannual appraisals</div>
-              </div>
-              <div className="p-3.5 rounded-lg border border-studio-border bg-white space-y-1">
-                <div className="text-xs text-studio-muted font-medium">Variable Component</div>
-                <div className="text-sm font-semibold text-studio-text">{job.variablePay}</div>
-                <div className="text-[11px] text-studio-muted">Based on system reliability, velocity, and design precision</div>
-              </div>
+              {STUDIO_PROVISIONS.map((item, idx) => (
+                <div key={idx} className="p-3.5 rounded-lg border border-studio-border bg-white space-y-1">
+                  <div className="text-xs text-studio-text font-bold flex items-center gap-1.5">
+                    {idx === 0 && <Laptop className="w-3.5 h-3.5 text-studio-accent" />}
+                    {idx === 1 && <Shield className="w-3.5 h-3.5 text-emerald-700" />}
+                    {idx === 2 && <BookOpen className="w-3.5 h-3.5 text-studio-amber" />}
+                    {idx === 3 && <MapPin className="w-3.5 h-3.5 text-studio-accent" />}
+                    <span>{item.title}</span>
+                  </div>
+                  <div className="text-[11px] text-studio-muted leading-relaxed">{item.desc}</div>
+                </div>
+              ))}
             </div>
           </section>
 

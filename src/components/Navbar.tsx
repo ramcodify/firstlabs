@@ -43,12 +43,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenLegal }) => {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: 'Products', href: '#products', hint: 'Portfolio' },
+    { label: 'Apps', href: '#products', hint: 'Portfolio' },
     { label: 'FirstHire', href: '#firsthire-showcase', hint: 'Flagship AI' },
-    { label: 'Research', href: '#research', hint: 'Vector & Privacy' },
-    { label: 'How We Build', href: '#philosophy', hint: 'Methodology' },
-    { label: 'Principles', href: '#about', hint: 'Values' },
+    { label: 'Research', href: '#research', hint: 'Applied Science' },
     { label: 'Careers', href: '#careers', hint: '2 Openings', badge: 'Hiring' },
+    { label: 'Vision', href: '#vision', hint: 'Three Pillars' },
     { label: 'Contact', href: '#contact', hint: 'Mumbai Hub' },
   ];
 
