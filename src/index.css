@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --studio-bg: #F7F6F2;
+  --studio-surface: #FFFFFF;
+  --studio-surface-warm: #EFECE6;
+  --studio-border: #E5E2D9;
+  --studio-border-strong: #D5D1C4;
+  --studio-text: #171717;
+  --studio-muted: #686868;
+  --studio-subtle: #8C8C88;
+  --studio-accent: #3446A8;
+  --studio-amber: #C79545;
+  --studio-dark: #151515;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F6F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5D1C4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A498;
+}
+
+/* Prevent unwanted layout shifts */
+html {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--studio-bg);
+  color: var(--studio-text);
+  overflow-x: hidden;
+}
+
+/* Subtle micro-grid background pattern for editorial texture */
+.editorial-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 226, 217, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 226, 217, 0.4) 1px, transparent 1px);
+}
+
+.editorial-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid var(--studio-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

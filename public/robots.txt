@@ -1,0 +1,19 @@
+# robots.txt for The First Labs (https://www.thefirstlabs.live/)
+User-agent: *
+Allow: /
+Crawl-delay: 5
+
+# Block known aggressive scrapers & automated crawler abuse
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+Sitemap: https://www.thefirstlabs.live/sitemap.xml

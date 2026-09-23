@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The First Labs — Independent Product Studio</title>
+    
+    <!-- Security & Anti-Abuse Meta Directives -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
+    <!-- Anti-Clickjacking Frame-Busting Protection -->
+    <style id="antiClickjack">
+      /* Hidden until top frame verification passes */
+      body { display: none !important; }
+    </style>
+    <script>
+      /* Ensure page is not being hosted in an unauthorized frame/iframe (Clickjacking mitigation) */
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        if (antiClickjack && antiClickjack.parentNode) {
+          antiClickjack.parentNode.removeChild(antiClickjack);
+        }
+      } else {
+        top.location = self.location;
+      }
+    </script>
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="description" content="The First Labs is an independent product studio building focused Android applications and AI-powered tools for everyday work, learning, and life." />
+    <meta name="keywords" content="The First Labs, FirstHire, CopyShelf, Gym Timer, Android apps, product studio, AI job search, software engineering Mumbai" />
+    <meta name="author" content="The First Labs" />
+    <link rel="canonical" href="https://www.thefirstlabs.live/" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The First Labs" />
+    <meta property="og:title" content="The First Labs — Independent Product Studio" />
+    <meta property="og:description" content="Independent products for work, learning, and everyday life. Creators of FirstHire, CopyShelf, and Gym Timer." />
+    <meta property="og:image" content="/assets/images/the-first-labs-banner.png" />
+    <meta property="og:url" content="https://www.thefirstlabs.live/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The First Labs — Independent Product Studio" />
+    <meta name="twitter:description" content="Independent products for work, learning, and everyday life. Creators of FirstHire, CopyShelf, and Gym Timer." />
+    <meta name="twitter:image" content="/assets/images/the-first-labs-banner.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/assets/images/the-first-labs-mark.png" />
+    <meta name="theme-color" content="#F7F6F2" />
+
+    <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.thefirstlabs.live/#organization",
+          "name": "The First Labs",
+          "url": "https://www.thefirstlabs.live/",
+          "logo": "https://www.thefirstlabs.live/assets/images/the-first-labs-mark.png",
+          "email": "talent@thefirstlabs.live",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Studio & Talent Inquiries",
+            "email": "talent@thefirstlabs.live"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.thefirstlabs.live/#website",
+          "url": "https://www.thefirstlabs.live/",
+          "name": "The First Labs",
+          "publisher": { "@id": "https://www.thefirstlabs.live/#organization" },
+          "inLanguage": "en-IN"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#F7F6F2] text-[#171717] font-sans antialiased selection:bg-[#3446A8] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
