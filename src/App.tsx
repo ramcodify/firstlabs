@@ -13,21 +13,23 @@ import { AboutSection } from './sections/AboutSection';
 import { ContactSection } from './sections/ContactSection';
 import { Footer } from './components/Footer';
 import { JobDetailModal } from './components/JobDetailModal';
-import { LegalModal } from './components/LegalModal';
+import { LegalPage } from './pages/LegalPage';
 import type { JobOpening } from './data/careers';
 
 export function App() {
   const [selectedJob, setSelectedJob] = useState<JobOpening | null>(null);
-  const [legalModalType, setLegalModalType] = useState<'privacy' | 'terms' | null>(null);
+  const [legalPageType, setLegalPageType] = useState<'privacy' | 'terms' | null>(null);
 
   // Check URL hash on mount or hash change for #privacy or #terms
   useEffect(() => {
     const handleHashCheck = () => {
       const hash = window.location.hash.toLowerCase();
       if (hash === '#privacy') {
-        setLegalModalType('privacy');
+        setLegalPageType('privacy');
       } else if (hash === '#terms') {
-        setLegalModalType('terms');
+        setLegalPageType('terms');
+      } else {
+        setLegalPageType(null);
       }
     };
 
@@ -37,16 +39,30 @@ export function App() {
   }, []);
 
   const handleCloseLegal = () => {
-    setLegalModalType(null);
+    setLegalPageType(null);
     if (window.location.hash === '#privacy' || window.location.hash === '#terms') {
       history.replaceState(null, '', window.location.pathname + window.location.search);
     }
   };
 
   const handleOpenLegal = (type: 'privacy' | 'terms') => {
-    setLegalModalType(type);
+    setLegalPageType(type);
     history.replaceState(null, '', `#${type}`);
   };
+
+  // Dedicated Full Page Legal View
+  if (legalPageType) {
+    return (
+      <LegalPage
+        type={legalPageType}
+        onBackToHome={handleCloseLegal}
+        onSwitchType={(type) => {
+          setLegalPageType(type);
+          history.replaceState(null, '', `#${type}`);
+        }}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#F7F6F2] text-[#171717] flex flex-col font-sans selection:bg-[#3446A8] selection:text-white">
@@ -77,16 +93,6 @@ export function App() {
       <JobDetailModal
         job={selectedJob}
         onClose={() => setSelectedJob(null)}
-      />
-
-      {/* Enhanced Legal & Governance Modal (Hidden by Default) */}
-      <LegalModal
-        type={legalModalType}
-        onClose={handleCloseLegal}
-        onSwitchType={(type) => {
-          setLegalModalType(type);
-          history.replaceState(null, '', `#${type}`);
-        }}
       />
     </div>
   );
