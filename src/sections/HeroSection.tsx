@@ -109,7 +109,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Active Tab: FirstHire */}
           {activeTab === 'firsthire' && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-in fade-in duration-300">
               
               {/* Product Info (5 cols) */}
               <div className="lg:col-span-5 space-y-5">
@@ -244,7 +244,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Active Tab: CopyShelf */}
           {activeTab === 'copyshelf' && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-in fade-in duration-300">
               <div className="lg:col-span-5 space-y-5">
                 <div className="flex items-center gap-3">
                   <img
@@ -327,7 +327,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Active Tab: Gym Timer */}
           {activeTab === 'gymtimer' && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-in fade-in duration-300">
               <div className="lg:col-span-5 space-y-5">
                 <div className="flex items-center gap-3">
                   <img
@@ -377,44 +377,91 @@ export const HeroSection: React.FC = () => {
               </div>
 
               {/* Gym Timer Heatmap Mockup */}
-              <div className="lg:col-span-7 bg-studio-surface-warm border border-studio-border rounded-xl p-4 sm:p-5">
-                <div className="space-y-4">
+              <div className="lg:col-span-7 bg-studio-surface-warm border border-studio-border rounded-xl p-4 sm:p-5 space-y-4">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-studio-border text-xs font-mono text-studio-muted">
                     <span>Consistency Heatmap (Last 16 Weeks)</span>
-                    <span className="font-bold text-emerald-700">78 Sessions Tracked</span>
+                    <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                      78 Sessions Tracked
+                    </span>
                   </div>
 
-                  {/* Simulated Heatmap Grid */}
-                  <div className="grid grid-cols-16 gap-1.5 p-3 bg-studio-surface rounded-lg border border-studio-border overflow-x-auto">
-                    {Array.from({ length: 96 }).map((_, i) => {
-                      const level = (i * 7 + 3) % 5;
-                      const colors = [
-                        'bg-studio-surface-warm',
-                        'bg-emerald-200',
-                        'bg-emerald-400',
-                        'bg-emerald-600',
-                        'bg-emerald-800'
-                      ];
-                      return (
-                        <div
-                          key={i}
-                          className={`w-3.5 h-3.5 rounded-[2px] ${colors[level]} transition-transform hover:scale-125`}
-                          title={`Day ${i + 1}`}
-                        />
-                      );
-                    })}
-                  </div>
-
-                  <div className="flex items-center justify-between text-[11px] font-mono text-studio-muted">
-                    <span>Less frequent</span>
-                    <div className="flex gap-1 items-center">
-                      <div className="w-2.5 h-2.5 rounded-[2px] bg-studio-surface-warm" />
-                      <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-200" />
-                      <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-400" />
-                      <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-600" />
-                      <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-800" />
+                  {/* Heatmap Container */}
+                  <div className="p-3 bg-studio-surface rounded-lg border border-studio-border overflow-x-auto">
+                    {/* Month header labels */}
+                    <div className="flex text-[10px] font-mono text-studio-muted mb-2 pl-6 justify-between">
+                      <span>Jun</span>
+                      <span>Jul</span>
+                      <span>Aug</span>
+                      <span>Sep</span>
                     </div>
-                    <span>More frequent</span>
+
+                    <div className="flex gap-2 items-start">
+                      {/* Day of week labels */}
+                      <div className="flex flex-col justify-between text-[9px] font-mono text-studio-subtle py-0.5 h-[98px] select-none shrink-0">
+                        <span>Mon</span>
+                        <span>Wed</span>
+                        <span>Fri</span>
+                      </div>
+
+                      {/* 16 Week Columns */}
+                      <div className="flex gap-1.5 flex-1 justify-between min-w-[280px]">
+                        {Array.from({ length: 16 }).map((_, col) => (
+                          <div key={col} className="flex flex-col gap-1.5">
+                            {Array.from({ length: 7 }).map((_, row) => {
+                              const isRestDay = row === 6 && col % 3 === 0;
+                              const intensity = isRestDay
+                                ? 0
+                                : ((col * 3 + row * 2 + 1) % 5);
+                              const colors = [
+                                'bg-studio-surface-warm border-studio-border/50',
+                                'bg-emerald-200 border-emerald-300',
+                                'bg-emerald-400 border-emerald-500',
+                                'bg-emerald-600 border-emerald-700',
+                                'bg-emerald-800 border-emerald-900',
+                              ];
+                              return (
+                                <div
+                                  key={row}
+                                  className={`w-3 h-3 rounded-[2px] border ${colors[intensity]} transition-transform hover:scale-125 cursor-pointer`}
+                                  title={`Week ${col + 1}, Day ${row + 1}`}
+                                />
+                              );
+                            })}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Heatmap Legend */}
+                    <div className="flex items-center justify-between text-[11px] font-mono text-studio-muted mt-3 pt-2 border-t border-studio-border/60">
+                      <span>Less frequent</span>
+                      <div className="flex gap-1 items-center">
+                        <div className="w-2.5 h-2.5 rounded-[2px] bg-studio-surface-warm border border-studio-border" />
+                        <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-200" />
+                        <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-400" />
+                        <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-600" />
+                        <div className="w-2.5 h-2.5 rounded-[2px] bg-emerald-800" />
+                      </div>
+                      <span>More frequent</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Live Session Companion Preview Widget */}
+                <div className="bg-studio-surface border border-studio-border rounded-xl p-3.5 shadow-subtle space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="font-bold text-studio-text">Active Session: Push Volume</span>
+                    </div>
+                    <span className="font-mono text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                      00:46:12
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between pt-1 border-t border-studio-border/60 text-[11px] text-studio-muted">
+                    <span>Rest Timer: <strong className="text-studio-text font-mono">01:30</strong> (Auto-vibrate)</span>
+                    <span className="text-emerald-700 font-mono font-medium">100% Offline SQLite</span>
                   </div>
                 </div>
               </div>

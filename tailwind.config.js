@@ -53,6 +53,10 @@ export default {
       animation: {
         'pulse-subtle': 'pulseSubtle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+        '20': 'repeat(20, minmax(0, 1fr))',
+      },
       keyframes: {
         pulseSubtle: {
           '0%, 100%': { opacity: '1' },
