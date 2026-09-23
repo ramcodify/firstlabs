@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Preloader } from './components/Preloader';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './sections/HeroSection';
 import { StudioIntro } from './sections/StudioIntro';
@@ -49,6 +50,9 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#F7F6F2] text-[#171717] flex flex-col font-sans selection:bg-[#3446A8] selection:text-white">
+      {/* Studio Editorial Preloader */}
+      <Preloader />
+
       {/* Sticky Top Navigation */}
       <Navbar />
 
